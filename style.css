@@ -1390,6 +1390,7 @@ a:hover .nav-title,
 .main-navigation li {
 	border-bottom: 1px solid #eee;
 	position: relative;
+	text-transform: uppercase;
 }
 
 .main-navigation li li,
@@ -1914,7 +1915,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .entry-title a {
-	color: #333;
+	color: white;
 	text-decoration: none;
 	margin-left: -2px;
 }
@@ -2055,7 +2056,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .blog .entry-meta a.post-edit-link,
 .archive .entry-meta a.post-edit-link,
 .search .entry-meta a.post-edit-link {
-	color: #222;
+	color: #F3AE27;
 	display: inline-block;
 	margin-left: 1em;
 	white-space: nowrap;
@@ -2216,6 +2217,12 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	-ms-transform: scale(-1, 1);
 	transform: scale(-1, 1);
 	width: 20px;
+}
+article.post {
+	background-color: #272329;
+	color: white;
+	margin-bottom: 10px;
+	opacity: 0.9;
 }
 
 /* Post Navigation */
@@ -3516,6 +3523,8 @@ p > object:only-child {
 	.js .main-navigation ul ul,
 	.js .main-navigation > div > ul {
 		display: block;
+		float: right;
+		text-transform: uppercase;
 	}
 
 	.main-navigation ul {
@@ -3842,8 +3851,7 @@ p > object:only-child {
 	body.has-sidebar.error404 #primary .page-header,
 	body.page-two-column:not(.archive) #primary .entry-header,
 	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
-		float: left;
-		width: 36%;
+		text-align: center;
 	}
 
 	.blog:not(.has-sidebar) #primary article,
@@ -3853,8 +3861,21 @@ p > object:only-child {
 	.error404.has-sidebar #primary .page-content,
 	body.page-two-column:not(.archive) #primary .entry-content,
 	body.page-two-column #comments {
-		float: right;
-		width: 58%;
+	}
+
+	main#main {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	article.post {
+		margin: 10px;
+		padding: 10px;
+		opacity: 0.9;
+		width: 45%;
+		height: 400px;
 	}
 
 	.blog .site-main > article,
