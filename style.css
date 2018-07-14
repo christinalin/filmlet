@@ -1778,10 +1778,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 #content:before {
-  content:"";
-  display:block;
-  height:260px; /* fixed header height*/
-  margin:-260px 0 0; /* negative fixed header height */
 }
 
 /*--------------------------------------------------------------
