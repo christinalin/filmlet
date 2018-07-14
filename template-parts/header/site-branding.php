@@ -9,6 +9,8 @@
  */
 
 ?>
+<div class="site-branding-banner">
+
 <div class="site-branding">
 	<div class="wrap">
 
@@ -35,4 +37,6 @@
 	<?php endif; ?>
 
 	</div><!-- .wrap -->
+	</div><!-- /site-branding-banner -->
 </div><!-- .site-branding -->
+</div>
