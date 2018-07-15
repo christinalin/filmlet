@@ -17,7 +17,7 @@
 <?php if ( is_home() ) : ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
-		style="background:url('<?php the_post_thumbnail_url(); ?>') center / contain no-repeat">
+		style="background-image:url('<?php the_post_thumbnail_url(); ?>')">
 
 		<div class="post_banner">
 				<div class="post_banner_column_left">
@@ -75,20 +75,10 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<?php
-
-		  $mykey_values = get_post_custom_values( 'post_logo' );
-		  foreach ( $mykey_values as $key => $value ) {
-				echo "<img class='post_logo' src='/wp-content/themes/filmlet/assets/images/" . $value.  ".png' />";
-		  }
-
-		?>	<?php
 		if ( is_sticky() && is_home() ) :
 			echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 		endif;
 		?>
-
-
-
 
 		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 			<div class="post-thumbnail">
@@ -99,6 +89,17 @@
 		<?php endif; ?>
 
 		<header class="entry-header">
+			<div class="post_header_logo">
+				<?php
+				  $mykey_values = get_post_custom_values( 'post_logo' );
+				  foreach ( $mykey_values as $key => $value ) {
+						echo "<img class='post_logo' src='/wp-content/themes/filmlet/assets/images/" . $value.  ".png' />";
+				  }
+				?>
+			</div> <!-- post_header_logo -->
+
+			<div class="post_entry_column2">
+			<div class="post_entry_title">
 			<?php
 			if ( 'post' === get_post_type() ) {
 					if ( ! is_single() ) {
@@ -114,18 +115,35 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 			?>
-		</header><!-- .entry-header -->
-
-
-		<div class="entry-content">
+		</div> <!-- post_entry_title -->
+		<div class="post_subtext">
 			<?php
-
 				$mykey_values = get_post_custom_values( 'post_subtext' );
 				foreach ( $mykey_values as $key => $value ) {
 					echo  $value;
 				}
 
 			?>
+		</div> <!-- post_subtext -->
+	</div> <!-- post_entry_column2 -->
+
+		</header><!-- .entry-header -->
+
+
+		<div class="entry-content">
+			<?php
+					/* translators: %s: Name of current post */
+					the_content( sprintf(
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+						get_the_title()
+					) );
+					wp_link_pages( array(
+						'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+						'after'       => '</div>',
+						'link_before' => '<span class="page-number">',
+						'link_after'  => '</span>',
+					) );
+					?>
 		</div><!-- .entry-content -->
 
 		<?php

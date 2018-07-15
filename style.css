@@ -1889,6 +1889,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 .site-content {
 	padding: 2.5em 0 0;
+	background-color: rgb(243, 245, 243);
 }
 
 /*--------------------------------------------------------------
@@ -2067,7 +2068,7 @@ body:not(.twentyseventeen-front-page) #comments {
 }
 
 body:not(.twentyseventeen-front-page) .entry-header {
-	padding-top: 0;
+	/* padding-top: 0; */
 }
 
 .blog .entry-meta a.post-edit-link,
@@ -2237,9 +2238,12 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 .home article.post {
 	background-color: #272329;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: white;
 	margin-bottom: 10px;
-	height: 460px;
+	height: 200px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -2277,7 +2281,8 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	display: flex;
   align-items: center;
 }
-.home .entry-content {
+.home .entry-content,
+.post-template-default .post_subtext {
 	color: #EA4F2B;
 }
 
@@ -2336,6 +2341,26 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .nav-links .nav-next .nav-title .nav-title-icon-wrapper {
 	margin-left: 0.5em;
 }
+
+.post-template-default .entry-header {
+	background-color: rgba(39,35,41, 0.9);
+	padding: 30px 50px;
+	color: #fff;
+	display: flex;
+	margin-bottom: 20px;
+}
+.post-template-default .post_header_logo {
+	max-width: 100px;
+	margin-right: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.post-template-default .post_entry_title h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
 
 /*--------------------------------------------------------------
 13.5 Pages
@@ -3948,7 +3973,10 @@ p > object:only-child {
 		margin: 10px;
 		overflow: hidden;
 		width: 45%;
-		height: 360px;
+		height: 250px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.home .post_logo_img {
