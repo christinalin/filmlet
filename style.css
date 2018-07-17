@@ -2497,10 +2497,20 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .home .footer-widget-1 {
-	font-weight: bold;
 	font-size: 25px;
-	padding-top: 30px;
 	width: 100%;
+	font-weight: bold;
+	padding: 20px;
+	width: 100%;
+	background-color: rgba(39,35,41, 0.6);
+	margin-top: 30px;
+	text-align: center;
+	color: white;
+}
+
+.home .footer-widget-1 a,
+.home .footer-widget-1 a:visited  {
+	color: #F3AE27;
 }
 
 /*--------------------------------------------------------------
