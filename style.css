@@ -1879,7 +1879,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 --------------------------------------------------------------*/
 
 .site-content-contain {
-	background-color: #fff;
+	background-color: rgb(243, 245, 243);
 	position: relative;
 }
 
@@ -2485,6 +2485,12 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .site-info span[role=separator]::before {
 	content: '\002f';
+}
+
+.home .footer-widget-1 {
+	font-weight: bold;
+	font-size: 25px;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -4154,7 +4160,7 @@ p > object:only-child {
 		margin-top: 3em;
 	}
 
-	.site-footer .widget-column.footer-widget-1 {
+	/* .site-footer .widget-column.footer-widget-1 {
 		float: left;
 		width: 36%;
 	}
@@ -4162,7 +4168,7 @@ p > object:only-child {
 	.site-footer .widget-column.footer-widget-2 {
 		float: right;
 		width: 58%;
-	}
+	} */
 
 	.social-navigation {
 		clear: left;
