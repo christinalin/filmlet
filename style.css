@@ -411,11 +411,6 @@ template {
 5.0 Typography
 --------------------------------------------------------------*/
 
-@font-face {
-	font-family: JosefinSansLight;
-	src: url(./assets/fonts/JosefinSans-Light.ttf);
-}
-
 body,
 button,
 input,
@@ -1576,7 +1571,8 @@ body {
 	-webkit-transition: margin-bottom 0.2s;
 	transition: margin-bottom 0.2s;
 	z-index: 3;
-	font-family: "JosefinSansLight"
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
 }
 
 .site-branding a {
@@ -1923,7 +1919,8 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	font-weight: 800;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
-	font-family: JosefinSansLight;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
 	color: #F3AE27;
 	font-size: 21px;
 	font-size: 1.3em;
