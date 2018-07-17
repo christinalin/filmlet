@@ -21,6 +21,10 @@ get_header(); ?>
 
 
 	<div id="primary" class="content-area">
+		<?php if ( is_home() && is_front_page() ) : ?>
+			<div class="home_about">The Filmlet specializes in producing various length commercials. All projects are handled from start to finish. The Filmlet also offers internal and event videography, as well as marketing and advertising photography.</div>
+		<?php endif; ?>
+
 		<?php if ( is_home() && ! is_front_page() ) : ?>
 			<header class="page-header">
 				<h1 class="page-title"><?php single_post_title(); ?></h1>
@@ -61,6 +65,11 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+
+		<?php if ( is_home() && is_front_page() ) : ?>
+			<div class="footer-widget-1">Contact us at <a href="mailto:TheFilmlet@gmail.com">TheFilmlet@gmail.com</a></div>
+		<?php endif; ?>
+
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
 </div><!-- .wrap -->

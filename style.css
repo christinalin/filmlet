@@ -1834,6 +1834,15 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	padding-top: 1.75em;
 }
 
+.home .content-area .home_about,
+.home .contact-us {
+	font-size: 15px;
+	margin-bottom: 50px;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+
 /* Panel edit link */
 
 .twentyseventeen-panel .edit-link {
@@ -2490,6 +2499,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .home .footer-widget-1 {
 	font-weight: bold;
 	font-size: 25px;
+	padding-top: 30px;
 	width: 100%;
 }
 
@@ -3572,6 +3582,16 @@ p > object:only-child {
 		font-size: 16px;
 		font-size: 2rem;
 	}
+
+	.home .content-area .home_about,
+	.home .contact-us {
+		font-size: 20px;
+		margin-bottom: 50px;
+		width: 100%;
+		text-align: center;
+		padding: 0 40px;
+	}
+
 
 	/* Navigation */
 
